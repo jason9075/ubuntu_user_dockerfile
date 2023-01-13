@@ -9,7 +9,8 @@ RUN apt-get update \
     git \
     ca-certificates \
     ssh \
-    sudo
+    sudo \
+    vim
 
 # Add user
 RUN useradd -ms /bin/bash -g root -G sudo -u 1001 -p "$(openssl passwd -1 ${USER_PASSWD})" ${USER_NAME}
